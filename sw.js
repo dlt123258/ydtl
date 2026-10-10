@@ -3,8 +3,8 @@ const CACHE_PREFIX = 'zhongtian-liuyao-';
 const CACHE_NAME = CACHE_PREFIX + '0c8ed4cd67ec';
 const CORE_URLS = [
   "./",
-  "./assets/index--u2cQwUx.js",
-  "./assets/index-BDfsL3Ml.css",
+  "./assets/index-D6-CTFFS.js",
+  "./assets/index-BLNEc9p3.css",
   "./assets/yidao-tarot-background-ink.png",
   "./assets/yidao-tarot-background-paper.png",
   "./assets/zhongtian-background-ink.png",
