@@ -1,0 +1,34 @@
+{
+  "id": "./",
+  "name": "中天六爻排盘",
+  "short_name": "中天六爻",
+  "description": "中天六爻与易道塔罗排盘工具，安装后可离线使用。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#071827",
+  "theme_color": "#071827",
+  "categories": ["utilities", "lifestyle"],
+  "icons": [
+    {
+      "src": "./icons/pwa-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/pwa-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/pwa-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title description">
+  <title id="title">中天六爻排盘</title>
+  <desc id="description">玄青底色、金色罗盘环与六条阴阳爻线组成的应用图标</desc>
+  <rect width="1024" height="1024" fill="#071827" />
+  <circle cx="512" cy="512" r="366" fill="#0b2235" stroke="#9a753b" stroke-width="18" />
+  <circle cx="512" cy="512" r="320" fill="none" stroke="#d4a65a" stroke-width="6" opacity="0.68" />
+  <path d="M512 118v58M512 848v58M118 512h58M848 512h58" stroke="#f1d18d" stroke-width="18" stroke-linecap="round" />
+  <g fill="#f1d18d">
+    <rect x="326" y="318" width="372" height="42" rx="21" />
+    <rect x="326" y="388" width="150" height="42" rx="21" />
+    <rect x="548" y="388" width="150" height="42" rx="21" />
+    <rect x="326" y="458" width="372" height="42" rx="21" />
+    <rect x="326" y="528" width="150" height="42" rx="21" />
+    <rect x="548" y="528" width="150" height="42" rx="21" />
+    <rect x="326" y="598" width="372" height="42" rx="21" />
+    <rect x="326" y="668" width="150" height="42" rx="21" />
+    <rect x="548" y="668" width="150" height="42" rx="21" />
+  </g>
+</svg>

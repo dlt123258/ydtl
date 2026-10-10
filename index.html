@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN" class="theme-booting" data-background-theme="jade" data-tarot-theme="light" data-tone="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="中天六爻与易道塔罗排盘工具，安装后可离线使用。" />
+    <meta name="theme-color" content="#e7ece1" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="中天六爻" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/app-icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
+    <script>
+      (() => {
+        const themes = {
+          jade: './assets/zhongtian-background-jade.png',
+          navy: './assets/zhongtian-background.png',
+          ivory: './assets/zhongtian-background-ivory.png',
+          ink: './assets/zhongtian-background-ink.png',
+          paper: './assets/zhongtian-background-paper.png'
+        };
+        let theme = 'jade';
+        let tarotTheme = 'light';
+        let backgroundHidden = false;
+        try {
+          const savedTheme = window.localStorage.getItem('zhongtian-background-theme');
+          if (savedTheme && Object.prototype.hasOwnProperty.call(themes, savedTheme)) theme = savedTheme;
+          const savedTarotTheme = window.localStorage.getItem('zhongtian-tarot-theme');
+          if (savedTarotTheme === 'dark' || savedTarotTheme === 'light') tarotTheme = savedTarotTheme;
+          backgroundHidden = window.localStorage.getItem('zhongtian-background-hidden') === 'true';
+        } catch {}
+        const tone = theme === 'jade' || theme === 'ivory' || theme === 'paper' ? 'light' : 'dark';
+        document.documentElement.dataset.backgroundTheme = theme;
+        document.documentElement.dataset.tarotTheme = tarotTheme;
+        document.documentElement.dataset.tone = tone;
+        document.documentElement.dataset.backgroundHidden = backgroundHidden ? 'true' : 'false';
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', tone === 'light' ? '#e7ece1' : '#071827');
+        const preload = document.createElement('link');
+        preload.rel = 'preload';
+        preload.as = 'image';
+        preload.href = themes[theme];
+        document.head.append(preload);
+        const tarotPreload = document.createElement('link');
+        tarotPreload.rel = 'preload';
+        tarotPreload.as = 'image';
+        tarotPreload.href = tarotTheme === 'light'
+          ? './assets/yidao-tarot-background-paper.png'
+          : './assets/yidao-tarot-background-ink.png';
+        document.head.append(tarotPreload);
+      })();
+    </script>
+    <title>中天六爻排盘</title>
+    <script type="module" crossorigin src="./assets/index-D6-CTFFS.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BLNEc9p3.css">
+  </head>
+  <body>
+    <script>
+      document.body.dataset.backgroundTheme = document.documentElement.dataset.backgroundTheme || 'jade';
+      document.body.dataset.tarotTheme = document.documentElement.dataset.tarotTheme || 'light';
+      document.body.dataset.tone = document.documentElement.dataset.tone || 'light';
+      document.body.dataset.backgroundHidden = document.documentElement.dataset.backgroundHidden || 'false';
+    </script>
+    <div id="app"></div>
+  </body>
+</html>
